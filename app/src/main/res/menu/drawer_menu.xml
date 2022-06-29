@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="PRINCIPAL">
+        <menu>
+            <item
+                android:id="@+id/itemInicio"
+                android:icon="@drawable/home"
+
+                android:title="Inicio">
+
+            </item>
+
+        </menu>
+
+    </item>
+    <item android:title="MENU ADMINISTRADOR">
+        <menu>
+            <item
+                android:id="@+id/itemAgendar"
+                android:icon="@drawable/calendar"
+                android:title="Agendar">
+
+            </item>
+            <item
+                android:id="@+id/itemHabitacioness"
+                android:title="Habitaciones"
+                android:icon="@drawable/trab">
+
+            </item>
+            <item
+                android:id="@+id/idTrabajadores"
+                android:title="Trabajadores"
+                android:icon="@drawable/trab">
+
+            </item>
+            <item
+                android:id="@+id/idListaRegistro"
+                android:title="Lista registro"
+                android:icon="@drawable/trab">
+
+            </item>
+
+            <item
+                android:id="@+id/itemListaTrabajador"
+                android:title="Lista Traabajador"
+                android:icon="@drawable/trab">
+
+            </item>
+            <item
+                android:id="@+id/itemAlimentos"
+                android:title="Lista Alimentos"
+                android:icon="@drawable/trab">
+
+            </item>
+
+        </menu>
+
+    </item>
+    <item android:title="AJUSTES"
+        android:icon="@drawable/ajuste">
+        <menu>
+            <item
+                android:id="@+id/itemUsuario"
+                android:title="Usuario">
+
+            </item>
+            <item
+                android:id="@+id/itemeSalir"
+                android:title="Salir">
+
+            </item>
+
+        </menu>
+
+    </item>
+
+</menu>
