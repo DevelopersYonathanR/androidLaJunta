@@ -32,7 +32,7 @@
             <TextView
 
                 android:id="@+id/txtIdA"
-                android:layout_width="215dp"
+                android:layout_width="15dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="50dp"
                 android:textSize="18sp"

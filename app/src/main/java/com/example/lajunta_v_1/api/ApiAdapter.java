@@ -15,7 +15,8 @@ public class ApiAdapter {
     // private  static  final  String Url_User="http://192.168.43.63/ApiLaJunta/api/";
     private static final String Url_Registro = "http://192.168.43.63/testing/";
     private static final String Url_TRABAJADOR = "http://192.168.43.63/testing/";
-    private static final String Url_Alimento = "http://192.168.43.63/testing/";
+   // private static final String Url_Alimento = "http://192.168.43.63/api/";
+    private static final String Url_Alimento = "http://192.168.43.63/ApiLaJunta/api/";
     private static Retrofit retrofit;
 
 
@@ -86,6 +87,7 @@ public class ApiAdapter {
 
         return ALIMENTO_API;
     }
+
 
 
 }
