@@ -11,12 +11,20 @@ public class ApiAdapter {
     private static ApiRegistro REGISTRO_API;
     private static ApiTrabajador TRABAJADOR_API;
     private static ApiAlimento ALIMENTO_API;
-    private static final String Url_User = "http://192.168.43.63/testing/";
+    private static ApiInsumo INSUMO_API;
+    private static ApiHabitacion HABITACION_API;
+   // private static final String Url_User = "http://192.168.43.63/testing/";
+    private static final String Url_User = "http://192.168.43.63/ApiLaJunta/api/";
     // private  static  final  String Url_User="http://192.168.43.63/ApiLaJunta/api/";
-    private static final String Url_Registro = "http://192.168.43.63/testing/";
-    private static final String Url_TRABAJADOR = "http://192.168.43.63/testing/";
+   // private static final String Url_Registro = "http://192.168.43.63/testing/";
+    private static final String Url_Registro = "http://192.168.43.63/ApiLaJunta/api/";
+    private static final String Url_TRABAJADOR = "http://192.168.43.63/ApiLaJunta/api/";
+
+   // private static final String Url_TRABAJADOR = "http://192.168.43.63/testing/";
    // private static final String Url_Alimento = "http://192.168.43.63/api/";
     private static final String Url_Alimento = "http://192.168.43.63/ApiLaJunta/api/";
+    private static final String Url_insumo = "http://192.168.43.63/ApiLaJunta/api/";
+    private static final String Url_habitacion = "http://192.168.43.63/ApiLaJunta/api/";
     private static Retrofit retrofit;
 
 
@@ -87,6 +95,40 @@ public class ApiAdapter {
 
         return ALIMENTO_API;
     }
+
+    public static ApiInsumo getInsumoApi() {
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
+        if (INSUMO_API == null) {
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(Url_insumo)
+                    .addConverterFactory(GsonConverterFactory.create(gson))
+                    .build();
+
+            INSUMO_API = retrofit.create(ApiInsumo.class);
+        }
+
+        return INSUMO_API;
+    }
+    public static ApiHabitacion getHabitacionApi() {
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
+        if (HABITACION_API == null) {
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(Url_habitacion)
+                    .addConverterFactory(GsonConverterFactory.create(gson))
+                    .build();
+
+            HABITACION_API = retrofit.create(ApiHabitacion.class);
+        }
+
+        return HABITACION_API;
+    }
+
 
 
 

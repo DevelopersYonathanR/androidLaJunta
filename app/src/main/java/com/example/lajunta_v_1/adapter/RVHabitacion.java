@@ -10,26 +10,26 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lajunta_v_1.R;
-import com.example.lajunta_v_1.models.Alimento;
-import com.example.lajunta_v_1.models.Insumo;
+
+import com.example.lajunta_v_1.models.Habitacion;
 
 import java.util.List;
 
-public class RVInsumo extends RecyclerView.Adapter<RVInsumo.ListaViewHolder>{
+public class RVHabitacion extends RecyclerView.Adapter<RVHabitacion.ListaViewHolder>{
     private final Context context;
-    private List<Insumo> insumoList;
+    private List<Habitacion> habitacionList;
 
-    public RVInsumo(Context context, List<Insumo> insumoList) {
+    public RVHabitacion(Context context, List<Habitacion> habitacionList) {
         this.context = context;
-        this.insumoList = insumoList;
+        this.habitacionList = habitacionList;
     }
 
 
     public static class ListaViewHolder extends RecyclerView.ViewHolder {
-        TextView txtIdI;
-        TextView txtNomI;
-        TextView txtcI;
-        TextView txtmI;
+        TextView txtIdHab;
+        TextView txtNoHAB;
+        TextView txtNumP;
+        TextView txtCostop;
 
 
       ;
@@ -37,10 +37,10 @@ public class RVInsumo extends RecyclerView.Adapter<RVInsumo.ListaViewHolder>{
 
         public ListaViewHolder(@NonNull View view) {
             super(view);
-            txtIdI = view.findViewById(R.id.txtIdI);
-                txtNomI = view.findViewById(R.id.txtNombreInsumo);
-            txtcI = view.findViewById(R.id.txtCantidadInsumo);
-            txtmI = view.findViewById(R.id.txtMedidaIns);
+            txtIdHab = view.findViewById(R.id.txtIdHab);
+            txtNoHAB = view.findViewById(R.id.txtNombreHabitacion);
+            txtNumP = view.findViewById(R.id.txtNumPersonas);
+            txtCostop = view.findViewById(R.id.txtCostoPersonas);
 
 
         }
@@ -50,18 +50,18 @@ public class RVInsumo extends RecyclerView.Adapter<RVInsumo.ListaViewHolder>{
     @NonNull
     @Override
     public ListaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.rv_lista_insumos, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.rv_lista_habitaciones, parent, false);
         return new ListaViewHolder(view);
     }
 
 
     @Override
     public void onBindViewHolder(@NonNull ListaViewHolder holder, int position) {
-        Insumo insumo = insumoList.get(position);
-        holder.txtIdI.setText(String.valueOf(insumo.getId()));
-        holder.txtNomI.setText(String.valueOf(insumo.getNombre()));
-        holder.txtcI.setText(String.valueOf(insumo.getCantidad()));
-        holder.txtmI.setText(String.valueOf(insumo.getMedida()));
+        Habitacion habitacion = habitacionList.get(position);
+        holder.txtIdHab.setText(String.valueOf(habitacion.getId()));
+        holder.txtNoHAB.setText(String.valueOf(habitacion.getNombre()));
+        holder.txtNumP.setText(String.valueOf(habitacion.getNum_personas()));
+        holder.txtCostop.setText(String.valueOf(habitacion.getNum_personas()));
 
 
 
@@ -70,7 +70,7 @@ public class RVInsumo extends RecyclerView.Adapter<RVInsumo.ListaViewHolder>{
 
     @Override
     public int getItemCount() {
-        return insumoList.size();
+        return habitacionList.size();
     }
 
 }

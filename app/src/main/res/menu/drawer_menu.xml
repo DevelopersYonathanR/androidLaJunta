@@ -16,29 +16,45 @@
     <item android:title="MENU ADMINISTRADOR">
         <menu>
             <item
+                android:id="@+id/idListaRegistro"
+                android:title="Lista registro"
+                android:icon="@drawable/trab">
+
+
+            </item>
+            <item
+                android:id="@+id/itemHabitaciones"
+                android:title="Habitaciones"
+                android:icon="@drawable/trab">
+
+            </item>
+            <item
+                android:id="@+id/itemAlimentos"
+                android:title="Lista Alimentos"
+                android:icon="@drawable/alimento">
+
+            </item>
+
+            <item
+                android:id="@+id/itemInsumos"
+                android:title="Lista Insumos"
+                android:icon="@drawable/alimento">
+
+            </item>
+            <item
                 android:id="@+id/itemAgendar"
                 android:icon="@drawable/calendar"
                 android:title="Agendar">
 
             </item>
-            <item
-                android:id="@+id/itemHabitacioness"
-                android:title="Habitaciones"
-                android:icon="@drawable/trab">
 
-            </item>
             <item
                 android:id="@+id/idTrabajadores"
                 android:title="Trabajadores"
                 android:icon="@drawable/trab">
 
             </item>
-            <item
-                android:id="@+id/idListaRegistro"
-                android:title="Lista registro"
-                android:icon="@drawable/trab">
 
-            </item>
 
             <item
                 android:id="@+id/itemListaTrabajador"
@@ -46,12 +62,8 @@
                 android:icon="@drawable/trab">
 
             </item>
-            <item
-                android:id="@+id/itemAlimentos"
-                android:title="Lista Alimentos"
-                android:icon="@drawable/trab">
 
-            </item>
+
 
         </menu>
 

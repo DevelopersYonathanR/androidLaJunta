@@ -15,6 +15,8 @@ import android.view.MenuItem;
 
 import com.example.lajunta_v_1.fragments.FragmentPrincipal;
 import com.example.lajunta_v_1.fragments.ListaAlimentosFragment;
+import com.example.lajunta_v_1.fragments.ListaHabitacionesFragment;
+import com.example.lajunta_v_1.fragments.ListaInsumosFragment;
 import com.example.lajunta_v_1.fragments.ListaRegistroFragment;
 import com.example.lajunta_v_1.fragments.ListaTrabajadorFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -73,7 +75,11 @@ public class ActivityPrincipal extends AppCompatActivity implements NavigationVi
                 fragmentTransaction.commit();
                 break;
 
-            case R.id.itemAgendar:
+            case R.id.itemHabitaciones:
+                fragmentManager = getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container, new ListaHabitacionesFragment());
+                fragmentTransaction.commit();
 
                 break;
             case R.id.itemAlimentos:
@@ -83,7 +89,11 @@ public class ActivityPrincipal extends AppCompatActivity implements NavigationVi
                 fragmentTransaction.commit();
                 break;
 
-            case R.id.itemHabitacioness:
+            case R.id.itemInsumos:
+                fragmentManager = getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.container, new ListaInsumosFragment());
+                fragmentTransaction.commit();
 
                 break;
 
