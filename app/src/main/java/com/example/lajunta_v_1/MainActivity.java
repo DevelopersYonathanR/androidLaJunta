@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 
 import com.example.lajunta_v_1.api.ApiAdapter;
+import com.google.android.filament.View;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -52,11 +53,12 @@ public class MainActivity extends AppCompatActivity {
 
                     if(response.body().equals("permitido")){
                         Intent intent = new Intent(getApplicationContext(),ActivityPrincipal.class);
+                     limpiar();
 
-                        Toast.makeText(getApplicationContext(), "Conexion exitosa", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getApplicationContext(), "Conexion exitosa", Toast.LENGTH_SHORT).show();
                         startActivity(intent);
                     }else{
-                        Toast.makeText(getApplicationContext(), "No se encontró el usuario", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Usuario o Contraseña Incorrectas", Toast.LENGTH_SHORT).show();
                     }
 
                 }
@@ -74,6 +76,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    public void limpiar(){
+        txtUsuarioLogin.setText("");
+        txtPassword.setText("");
     }
 
 

@@ -4,25 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    app:cardCornerRadius="3dp"
+    app:cardCornerRadius="12dp"
     app:cardElevation="3dp"
+
     app:cardUseCompatPadding="true">
 
 
     <RelativeLayout
-
+        android:background="#4E9F3D"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp">
 
         <LinearLayout
-
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:orientation="horizontal">
 
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="ID : "
@@ -30,19 +30,22 @@
                 android:textStyle="bold" />
 
             <TextView
-
                 android:id="@+id/txtIdA"
-                android:layout_width="15dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="50dp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="80dp"
+
+                android:gravity="center"
+
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:orientation="horizontal">
 
             <TextView
@@ -55,18 +58,22 @@
 
             <TextView
                 android:id="@+id/txtNombreAlimento"
-                android:layout_width="215dp"
+                android:layout_width="250dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="34dp"
+
+                android:gravity="center"
+
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
 
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="70dp"
             android:orientation="horizontal">
 
             <TextView
@@ -79,18 +86,21 @@
 
             <TextView
                 android:id="@+id/txtCantidad"
-                android:layout_width="215dp"
+                android:layout_width="250dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="27dp"
+                android:gravity="center"
                 android:textSize="18sp"
+
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
 
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="110dp"
             android:orientation="horizontal">
 
             <TextView
@@ -103,10 +113,13 @@
 
             <TextView
                 android:id="@+id/txtMedida"
-                android:layout_width="215dp"
+                android:layout_width="250dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
                 android:textSize="18sp"
+
                 android:textStyle="bold" />
         </LinearLayout>
 
